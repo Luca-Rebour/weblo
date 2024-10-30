@@ -1,0 +1,7 @@
+*{
+    color: white;
+}
+
+.navbar-brand{
+    column-gap: 1rem;
+}

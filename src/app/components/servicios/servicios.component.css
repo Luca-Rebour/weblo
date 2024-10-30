@@ -1,0 +1,77 @@
+.contenedor-principal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9D11C0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    padding: 20px;
+    flex-basis: 40%; /* Ajusta el ancho de las tarjetas */
+    min-width: 250px; /* Ancho mínimo para las tarjetas */
+    height: 200px;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro de la tarjeta se dispongan en columna */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.card lucide-icon {
+    font-size: 2rem;
+    color: #FF5AC2;
+    margin-bottom: 10px; /* Añade un margen inferior para separar el icono del texto */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #9D11C0;
+    font-weight: 500;
+    margin-bottom: 10px; /* Añade un margen inferior para separar el título del párrafo */
+    text-align: center;
+}
+
+.card p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    color: #000000;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+    .card {
+        flex-basis: 45%; /* Ajusta el ancho de las tarjetas para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: 100%; /* Ajusta el ancho de las tarjetas para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-principal h2 {
+        font-size: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.875rem;
+    }
+}
