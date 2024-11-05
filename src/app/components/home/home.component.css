@@ -4,6 +4,7 @@
     flex-direction: column;
     height: 100vh;
     /* O la altura que necesites */
+    position: relative;
 }
 
 .color-white {
@@ -17,7 +18,7 @@ main {
     align-items: center;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     font-weight: 700;
     color: white;
@@ -27,13 +28,14 @@ h1{
     position: absolute;
     bottom: 50px;
     left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
 }
 
 .arrow span {
     display: block;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 30px;
+    height: 30px;
     border-bottom: 5px solid white;
     border-right: 5px solid white;
     transform: rotate(45deg);
@@ -62,5 +64,32 @@ h1{
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .arrow span {
+        width: 20px;
+        height: 20px;
+        border-bottom: 4px solid white;
+        border-right: 4px solid white;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrow span {
+        width: 15px;
+        height: 15px;
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }

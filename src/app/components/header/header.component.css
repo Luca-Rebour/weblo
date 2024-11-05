@@ -4,4 +4,8 @@
 
 .navbar-brand{
     column-gap: 1rem;
+
+    &&:hover{
+        color: white;
+    }
 }

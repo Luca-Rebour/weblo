@@ -10,4 +10,12 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class HomeComponent {
 
+
+  bajar(): void {
+    const targetElement = document.getElementById('servicios');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
 }

@@ -18,7 +18,7 @@ p {
     font-size: 1rem;
     font-weight: 300;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffffe2;
 }
 
 /* Estilo para el contenedor del formulario */
@@ -47,6 +47,15 @@ form label {
   display: block;
   margin-bottom: 5px;
   color: #333;
+}
+
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-height: 200px;
 }
 
 /* Estilo para los elementos de entrada */

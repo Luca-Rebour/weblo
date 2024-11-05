@@ -1,12 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { LucideAngularModule, Code, Zap, Users } from 'lucide-angular';
+import { LucideAngularModule, Code, Zap, Users, Mail } from 'lucide-angular';
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 // Configuración de la aplicación
 export const appConfig: ApplicationConfig = {
   providers: [
-    importProvidersFrom(LucideAngularModule.pick({ Code, Zap, Users })),
+    importProvidersFrom(LucideAngularModule.pick({ Code, Zap, Users, Mail })),    
     // Otros proveedores que necesites
   ],
 };

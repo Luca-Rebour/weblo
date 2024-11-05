@@ -1,21 +1,23 @@
-<div class="contenedor-principal">
+<div class="contenedor-principal" id="formulario">
 
 <h2>¿Listo para empezar?</h2>
 
 <p>Hablemos sobre tu proyecto y veamos cómo podemos ayudarte a alcanzar tus objetivos.</p>
 
-<form>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" required placeholder="Juan">
+    <label for="name">Nombre</label>
+    <input id="name" formControlName="name" type="text" required placeholder="Juan">
   </div>
 
   <div>
     <label for="email">Email</label>
-    <input type="email" id="email" name="email" required placeholder="tumail@exaple.com">
+    <input id="email" formControlName="email" type="email" required placeholder="tumail@example.com">
   </div>
 
   <button type="submit">Enviar</button>
 </form>
+
+<div *ngIf="responseMessage">{{ responseMessage }}</div>
 
 </div>
