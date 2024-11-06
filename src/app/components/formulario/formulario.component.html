@@ -7,17 +7,23 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="name">Nombre</label>
-    <input id="name" formControlName="name" type="text" required placeholder="Juan">
+    <input id="name" formControlName="name" type="text" required placeholder="Tu nombre">
   </div>
 
   <div>
     <label for="email">Email</label>
     <input id="email" formControlName="email" type="email" required placeholder="tumail@example.com">
   </div>
+  <div>
+    <label for="texto">Cuentanos mas sobre tu idea</label>
+    <textarea id="texto" formControlName="texto" placeholder="Escribe aquí tu mensaje"></textarea>
+  </div>
 
   <button type="submit">Enviar</button>
 </form>
 
-<div *ngIf="responseMessage">{{ responseMessage }}</div>
+<div *ngIf="responseMessage" [ngClass]="{ 'alert': true, 'alert-success': success, 'alert-danger': !success }">
+  {{ responseMessage }}
+</div>
 
 </div>

@@ -33,6 +33,8 @@ h1 {
 }
 
 .arrow span {
+    will-change: transform, opacity;
+    animation-delay: 1s; /* Retraso de 1 segundo */
     display: block;
     width: 30px;
     height: 30px;
@@ -54,7 +56,7 @@ h1 {
 @keyframes animate {
     0% {
         opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
+        transform: rotate(45deg) translate(-10px, -10px);
     }
 
     50% {
@@ -63,9 +65,10 @@ h1 {
 
     100% {
         opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
+        transform: rotate(45deg) translate(10px, 10px);
     }
 }
+
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {

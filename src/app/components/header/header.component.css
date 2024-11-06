@@ -1,11 +1,23 @@
 *{
-    color: white;
+
 }
 
 .navbar-brand{
     column-gap: 1rem;
 
     &&:hover{
-        color: white;
     }
 }
+
+.navbar-brand img {
+    width: 60px;
+    height: auto; /* Mantiene la proporción */
+  }
+  
+  /* Ajuste para dispositivos pequeños */
+  @media (max-width: 576px) {
+    .navbar-brand img {
+      width: 50px;
+    }
+  }
+  

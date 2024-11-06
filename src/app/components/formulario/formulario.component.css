@@ -6,6 +6,11 @@
     padding: 50px;
 }
 
+.alert{
+  width: fit-content;
+  margin: 15px auto;
+}
+
 h2 {
     font-size: 2rem;
     font-weight: 700;

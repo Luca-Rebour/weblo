@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost/weblo/mail.php';
+  private apiUrl = 'https://weblo.uy/mail.php';
 
   constructor(private http: HttpClient) {}
 
-  sendContactForm(formData: FormData): Observable<string> {
-    return this.http.post<string>(this.apiUrl, formData, { responseType: 'text' as 'json' });
+  sendContactForm(formData: FormData): Observable<{ status: string }> {
+    return this.http.post<{ status: string }>(this.apiUrl, formData);
   }
 }
